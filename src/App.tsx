@@ -1,4 +1,4 @@
-import BudgetForm from "./components/BudgetForm"
+import BudgetForm from "./components/BudgetForm";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <BudgetForm />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
