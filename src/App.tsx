@@ -2,6 +2,7 @@ import BudgetForm from "./components/BudgetForm";
 import {useBudget} from "./hooks/useBudget.ts";
 import {useMemo} from "react";
 import BudgetTracker from "./components/BudgetTracker.tsx";
+import ExpenseModal from "./components/ExpenseModal.tsx";
 
 function App() {
 
@@ -16,9 +17,17 @@ function App() {
                     Planificador de Gastos
                 </h1>
             </header>
+
             <div className="max-w-3xl mx-auto bg-white shadow-lg mt-10 p-10 rounded-lg">
                 {isvValidBudget ? <BudgetTracker/> : <BudgetForm/>}
             </div>
+
+            {isvValidBudget && (
+                <main className={'max-w-3xl mx-auto py-10'}>
+                    <ExpenseModal/>
+                </main>
+
+            )}
         </>
     );
 }
