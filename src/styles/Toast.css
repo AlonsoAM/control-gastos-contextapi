@@ -1,0 +1,33 @@
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateX(100%); /* Empezar fuera de la pantalla a la derecha */
+    }
+    /* Mostrar durante más tiempo */
+    5%, 95% {
+        opacity: 1;
+        transform: translateX(0); /* Mantener en pantalla */
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%); /* Deslizar hacia afuera */
+    }
+}
+
+/* Nueva animación para la barra de progreso */
+@keyframes progress {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+.animate-fade-in-out {
+    animation: fadeInOut 5s ease-in-out forwards; /* Duración 5 segundos */
+}
+
+.animate-progress {
+    animation: progress 5s linear forwards; /* Duración 5 segundos */
+}
